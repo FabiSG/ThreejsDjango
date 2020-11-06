@@ -1,0 +1,83 @@
+<!--
+<html>
+
+<head>
+    <title>{{ title }}</title>
+    {% load static %}
+    Instruct Django to load static files 
+<link rel="stylesheet" type="text/css" href="{% static '/css/site.css' %}" />
+</head>
+
+<body>
+    <span class="message">{{ message }}</span>{{ content }}
+
+
+</body>
+
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>three.js webgl - OBJLoader2 basic usage</title>
+    <meta charset="utf-8">
+    {% load static %}
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"> {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/site.css' %}" />
+    <style>
+        #glFullscreen {
+            width: 100%;
+            height: 100vh;
+            min-width: 640px;
+            min-height: 360px;
+            position: relative;
+            overflow: hidden;
+            z-index: 0;
+        }
+        
+        #example {
+            width: 25%;
+            height: 50%;
+            margin-top: 250px;
+            margin-left: 1010px;
+            background-color: #000000;
+        }
+        
+        #feedback {
+            color: darkorange;
+        }
+        
+        #dat {
+            user-select: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-Index: 200;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="glFullscreen">
+        <canvas id="example"></canvas>
+    </div>
+    <div id="dat">
+
+    </div>
+    <div id="info">
+        <a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> - OBJLoader2 direct loader test
+        <div id="feedback"></div>
+    </div>
+    <img src= "{% static 'img/preview1.jpg' %}">
+    <img src= "{% static 'img/eimg.png' %}">
+    <script type="application/javascript" src="{% static 'js/alert.js' %}"></script>
+    <script type="module" src="{% static 'js/main.js' %}"></script>
+    <script type="module" src="{% static 'build/three.module.js' %}"></script>
+    <script type="module" src="{% static './build/three.module.js' %}" ></script>
+
+</body>
+
+</html>
